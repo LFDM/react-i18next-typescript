@@ -62,3 +62,22 @@ export type TypedWithTranslationFn<Keys> = (
 ) => React.ComponentType<
   Omit<P, keyof TypedWithTranslation<Keys>> & WithTranslationProps
 >;
+
+// ---------- Translation ----------
+
+export interface TypedTranslationProps<Keys> {
+  children: (
+    t: TypedTFunction<Keys>,
+    options: {
+      i18n: i18n;
+      lng: string;
+    },
+    ready: boolean
+  ) => React.ReactNode;
+  ns?: Namespace;
+  i18n?: i18n;
+}
+
+export type TypedTranslation<Keys> = (
+  props: TypedTranslationProps<Keys>
+) => any;
