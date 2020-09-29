@@ -1,17 +1,21 @@
 {
   "name": "react-i18next-typescript",
-  "version": "0.0.1-rc2",
+  "version": "0.0.1-rc3",
   "main": "lib/index.js",
   "author": "LFDM <1986gh@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/react": "^16.8.2",
     "i18next": "^19.7.0",
-    "i18next-typescript": "^0.0.1-rc2",
-    "react-i18next": "^11.7.3"
+    "i18next-typescript": "^0.0.1-rc3",
+    "react": "^16.10.2",
+    "react-i18next": "^11.7.3",
+    "typescript": "^3.6.4"
   },
   "peerDependencies": {
     "i18next": "^19.7.0",
-    "i18next-typescript": "^0.0.1-rc2",
+    "i18next-typescript": "^0.0.1-rc3",
+    "react": "^16.10.2",
     "react-i18next": "^11.7.3"
   },
   "dependencies": {},
