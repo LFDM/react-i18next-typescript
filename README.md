@@ -4,7 +4,7 @@ Typescript bindings for [i18next-typescript](https://github.com/LFDM/i18next-typ
 
 ### How to use?
 
-- Check out the documentation for [i18next-typescript](https://github.com/LFDM/i18next-typescript/README.md) for a general overview and how to generate types.
+- Check out the documentation for [i18next-typescript](https://github.com/LFDM/i18next-typescript) for a general overview and how to generate types.
 - Afterwards re-export the typed version of your React helpers, e.g. `useTranslation`:
 
 ```typescript
