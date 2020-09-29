@@ -1,7 +1,11 @@
 import { i18n } from "i18next";
 import { TypedTFunction, TypedWithT } from "i18next-typescript";
 import * as React from "react";
-import { Namespace, UseTranslationOptions } from "react-i18next";
+import {
+  Namespace,
+  UseTranslationOptions,
+  WithTranslationProps,
+} from "react-i18next";
 
 // ---------- useTranslation ----------
 
@@ -45,3 +49,16 @@ export type TypedTrans<Keys, E extends Element = HTMLDivElement> = (
 ) => React.ReactElement;
 
 // ---------- WithTranslation ----------
+
+export interface TypedWithTranslation<Keys> extends TypedWithT<Keys> {}
+
+export type TypedWithTranslationFn<Keys> = (
+  ns?: Namespace,
+  options?: {
+    withRef?: boolean;
+  }
+) => <P extends TypedWithTranslation<Keys>>(
+  component: React.ComponentType<P>
+) => React.ComponentType<
+  Omit<P, keyof TypedWithTranslation<Keys>> & WithTranslationProps
+>;
